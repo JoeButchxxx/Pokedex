@@ -15,7 +15,10 @@ const getPokemonData = async query => {
 
   const pokemon = response.json()
 
-
+  document.getElementById('update_img').setAttribute('src', pokemon.sprites.other.dream_world.front_default);
+  document.getElementById('update_name').innerHTML = pokemon.name;
+  document.getElementById('update_candy_title').innerHTML = `${pokemon.name}candy`;
+  document.getElementById('update_hp').innerHTML = `HP ${Math.floor(Math.floor() * pokemon.stats[0].base_stats) * 1}`;
 
 }
 
